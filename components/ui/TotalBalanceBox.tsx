@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
-import AnimateCounter from "./ui/AnimateCounter";
+import AnimateCounter from "./AnimateCounter";
+import DoughnutChart from "../DoughnutChart";
 
 const TotalBalanceBox = ({
   accounts = [],
@@ -9,15 +10,17 @@ const TotalBalanceBox = ({
 }: TotlaBalanceBoxProps) => {
   return (
     <section className="total-balance">
-      <div className="total-balance-chart">{/* Doughnut Chart */}</div>
+      <div className="total-balance-chart">
+        <DoughnutChart accounts={accounts} />
+      </div>
       <div className="flex flex-col gap-4">
         <div className="header-2"> Banks Accounts: {totalBanks}</div>
       </div>
       <div className="flex flex-col gap-4">
         <p className="header-2"> Current Balance:</p>
-        <p className="total-balance-amount flex-center gap-2">
+        <div className="total-balance-amount flex-center gap-2">
           <AnimateCounter amount={totalCurrentBalance} />
-        </p>
+        </div>
       </div>
     </section>
   );

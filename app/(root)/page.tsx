@@ -1,4 +1,4 @@
-import TotalBalanceBox from "@/components/TotalBalanceBox";
+import TotalBalanceBox from "@/components/ui/TotalBalanceBox";
 import HeaderBox from "@/components/ui/headerBox";
 import React from "react";
 
