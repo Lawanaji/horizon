@@ -6,7 +6,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DoughnutChart = ({ accounts }: DoughnutChartProps) => {
   const data = {
-    dataset: [
+    datasets: [
       {
         label: "banks",
         data: [1250, 2000, 3000, 4000],
@@ -19,7 +19,7 @@ const DoughnutChart = ({ accounts }: DoughnutChartProps) => {
     <Doughnut
       data={data}
       options={{
-        cutout: "60",
+        cutout: "60%",
         plugins: {
           legend: {
             display: false,
